@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Personajes – Stranger Things</title>
     <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="icon" type="image/png" href="/public/img/favicon.png">
 </head>
 <body>
 
