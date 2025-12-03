@@ -14,6 +14,8 @@ RUN sed -i \
     -e 's/#LoadModule rewrite_module/LoadModule rewrite_module/' \
     -e 's/#LoadModule proxy_module/LoadModule proxy_module/' \
     -e 's/#LoadModule proxy_http_module/LoadModule proxy_http_module/' \
+    -e 's/#LoadModule ssl_module/LoadModule ssl_module/' \
+    -e 's/#LoadModule socache_shmcb_module/LoadModule socache_shmcb_module/' \
     /usr/local/apache2/conf/httpd.conf \
     && sed -i "s#__FRONTEND_URL__#${FRONTEND_URL}#g; s#__API_BACKEND_URL__#${API_BACKEND_URL}#g" /usr/local/apache2/conf/extra/httpd-proxy.conf \
     && echo "Include conf/extra/httpd-proxy.conf" >> /usr/local/apache2/conf/httpd.conf \
