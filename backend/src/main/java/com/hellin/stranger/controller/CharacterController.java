@@ -3,13 +3,16 @@ package com.hellin.stranger.controller;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.hellin.stranger.model.Character;
 import com.hellin.stranger.repository.CharacterRepository;
 
 @RestController
-@RequestMapping("/characters")
+@RequestMapping("/api/characters")
 /**
  * En este controlador se exponen todos los endpoints referentes a Characters {@link Character}
  * @version 1.0
