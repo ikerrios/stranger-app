@@ -7,7 +7,7 @@ class CharacterApi
     /**
      * Constructor del servicio que consulta la API REST.
      * Ejemplo de baseUrl:
-     *   http://localhost:8080/characters
+     *   http://localhost:8080/api/characters
      */
     public function __construct(string $baseUrl)
     {
