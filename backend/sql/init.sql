@@ -3,7 +3,7 @@ CREATE DATABASE stranger;
 
 -- Crear la tabla de personajes
 CREATE TABLE IF NOT EXISTS characters (
-    id SERIAL PRIMARY KEY,
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     power VARCHAR(200),
     power_level INT,
