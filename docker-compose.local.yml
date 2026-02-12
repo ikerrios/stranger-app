@@ -1,0 +1,22 @@
+services:
+  db: 
+    image: postgres:16
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./backend/sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  frontend:
+    build: 
+      context: frontend
+      dockerfile: Dockerfile
+    environment:
+      SPRING_PROFILES_ACTIVE: local  
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - db
